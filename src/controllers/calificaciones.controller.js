@@ -19,12 +19,15 @@ const getCalificacionesById = async (req, res) => {
 
 
 const postCalificaciones = async (req, res) => {
-   
+   try{
     const calificacionNueva = req.body
     const calificaciones = await service.postCalificaciones(calificacionNueva)
     res.send(calificaciones)
 
-
+}catch (error){
+    console.log("Error");
+    res.send({ statusCode: 400, message: "Bad Request" });
+}
     
 }
 

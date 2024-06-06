@@ -31,9 +31,16 @@ const calificaciones= [
     }
   
   const postCalificaciones = async (nuevaCal) => {
-    nuevaCal.id = calificaciones.length + 1;
+    if(nuevaCal.nota < 1 || nuevaCal.nota >10){
+        throw new Error("la calificacion debe estar en un rango de 1 a 10")
+
+    }else{
+        nuevaCal.id = calificaciones.length + 1;
+
     await calificaciones.push(nuevaCal) 
     return nuevaCal
+    }
+    
   }
 
 
