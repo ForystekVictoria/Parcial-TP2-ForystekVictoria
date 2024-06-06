@@ -1,0 +1,17 @@
+{
+  "name": "parcialtp2-forystekvictoria",
+  "version": "1.0.0",
+  "description": "Parcial TP 2",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "watch": "node --watch index.js"
+  },
+  "author": "Victoria Forystek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
